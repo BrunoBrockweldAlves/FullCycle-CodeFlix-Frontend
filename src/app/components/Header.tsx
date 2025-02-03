@@ -8,9 +8,26 @@ export default function Header() {
     top-0
     z-50
     flex
+    w-full
+
+    items-center
+    justify-between
+    px-3
+    py-3
+
+    lg:px-10
+    lg:py-6
+
+    bg-black
   "
     >
-      Header
+      <img src="/logo.png" alt="CodeFlix" width={120} height={120} />
+      <ul className="flex space-x-4">
+        <li>Home</li>
+        <li>TV Shows</li>
+        <li>Movies</li>
+        <li>Latest</li>
+      </ul>
     </header>
   );
 }
