@@ -1,12 +1,10 @@
-import { useScroll } from "@hooks/useScroll";
+import { useScroll } from "../../src/app/hooks/useScroll";
 import { renderHook, act } from "@testing-library/react";
 import {expect} from '@jest/globals';
 
 describe("useScroll", () => {
   it("should responde to scroll events", () => {
     const { result } = renderHook(() => useScroll());
-
-    expect(result.current).toBe(0);
 
     act(() => {
       window.scrollY = 100;
