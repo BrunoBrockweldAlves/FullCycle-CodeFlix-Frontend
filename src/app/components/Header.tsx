@@ -1,24 +1,11 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { UserProfile } from "./UserProfile";
+import { NavLinks } from "./NavLinks";
+import { Logo } from "./Logo";
+import { useScroll } from "../hooks/useScroll";
 
 export default function Header() {
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   return (
     <header
       className={`
@@ -30,7 +17,7 @@ export default function Header() {
 
     items-center
     justify-between
-    ${isScrolled && "bg-black"}
+    ${useScroll() && "bg-black"}
     px-4
     py-4
 
@@ -39,25 +26,10 @@ export default function Header() {
     transition-all`}
     >
       <div className="flex items-center space-x-4 md:space-x-8">
-        <img src="/logo.png" alt="CodeFlix" width={120} height={120} />
-        <ul className="hidden md:flex md:space-x-4">
-          <li>Home</li>
-          <li>TV Shows</li>
-          <li>Movies</li>
-          <li>Latest</li>
-        </ul>
+        {Logo()}
+        {NavLinks()}
       </div>
-
-      <div className="flex items-center space-x-4">
-        <p className="hidden cursor-not-allowed lg:inline">Welcome, User</p>
-        <img
-          className="cursor-pointer rounded"
-          src="/avatar.jpg"
-          alt="Avatar"
-          width={30}
-          height={30}
-        />
-      </div>
+      {UserProfile()}
     </header>
   );
 }
