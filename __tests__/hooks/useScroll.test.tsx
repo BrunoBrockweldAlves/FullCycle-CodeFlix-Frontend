@@ -1,4 +1,5 @@
-import { useScroll } from "../../src/app/hooks/useScroll";
+// import { useScroll } from "../../src/app/hooks/useScroll";
+import { useScroll } from "@hooks/useScroll";
 import { renderHook, act } from "@testing-library/react";
 import {expect} from '@jest/globals';
 
@@ -12,5 +13,12 @@ describe("useScroll", () => {
     });
 
     expect(result.current).toBeTruthy();
+
+    act(() => {
+      window.scrollY = 0;
+      window.dispatchEvent(new Event("scroll"));
+    });
+
+    expect(result.current).toBeFalsy();
   });
 });
