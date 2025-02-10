@@ -1,4 +1,3 @@
-// import { useScroll } from "../../src/app/hooks/useScroll";
 import { useScroll } from "@hooks/useScroll";
 import { renderHook, act } from "@testing-library/react";
 import {expect} from '@jest/globals';

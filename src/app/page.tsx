@@ -40,16 +40,21 @@ export default function Home() {
           </button>
         </div>
 
-        <div className="flex space-x-2 overflow-x-auto scrollbar-hide">
-          {[1,2,3,4,5].map((i) => (
-            <Image
-            src={`/item_${i}.png`}
-            alt="CodeFlix"
-            width={360}
-            height={360}
-            className="cursor-pointer"
-            key={i}/>
-            ))}
+        {/* <div className="flex-col space-y-4 overflow-x-auto scrollbar-hide"> */}
+        <div className="flex-col space-y-4">
+          <div className='flex space-x-4 overflow-x-auto scrollbar-hide'>
+              {[1,2,3,4,5].map((i) => (
+                <div key={i} className="h-28 min-w-[200px] group relative 
+                transition duration-200 ease-in transform sm:h-36 hover:scale-110 ">
+                  <Image
+                    src={`/item_${i}.png`}
+                    alt="CodeFlix"
+                    className="rounded"
+                    fill={true}
+                    />
+                </div>
+              ))}
+          </div>
         </div>
       </main>
     </div>

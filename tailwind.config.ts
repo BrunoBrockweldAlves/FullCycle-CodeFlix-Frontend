@@ -1,11 +1,8 @@
-import type { Config } from "tailwindcss";
+import { Config } from 'tailwindcss';
+import plugin from 'tailwindcss/plugin';
+import scrollbarHide from 'tailwind-scrollbar-hide';
 
-export default {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+const config: Config = {
   theme: {
     extend: {
       colors: {
@@ -14,5 +11,11 @@ export default {
       },
     },
   },
-  plugins: [],
-} satisfies Config;
+  plugins: [
+    scrollbarHide,
+
+  ],
+  content: ["./src/**/*.{js,ts,jsx,tsx}"],
+};
+
+export default config;
