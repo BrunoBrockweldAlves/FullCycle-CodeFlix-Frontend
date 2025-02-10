@@ -13,7 +13,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-      className='no-scrollbar bg-black text-white'
+      className='bg-black text-white'
       >{children} </body>
     </html>
   );

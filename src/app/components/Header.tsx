@@ -9,21 +9,17 @@ export default function Header() {
   return (
     <header
       className={`
-    fixed
-    top-0
-    z-50
-    flex
-    w-full
-
-    items-center
-    justify-between
     ${useScroll() && "bg-black"}
+    fixed top-0 z-50
+    flex w-full items-center justify-between
+    bg-gradient-to-b from-transparent to-black
+    p-2
     px-4
-    py-4
 
-    lg:px-10
+    transition-all
+    lg:px-16
     lg:py-4
-    transition-all`}
+    `}
     >
       <div className="flex items-center space-x-4 md:space-x-8">
         {Logo()}

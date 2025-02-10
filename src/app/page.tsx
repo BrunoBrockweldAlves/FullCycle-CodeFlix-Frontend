@@ -39,6 +39,18 @@ export default function Home() {
             More Info
           </button>
         </div>
+
+        <div className="flex space-x-2 overflow-x-auto scrollbar-hide">
+          {[1,2,3,4,5].map((i) => (
+            <Image
+            src={`/item_${i}.png`}
+            alt="CodeFlix"
+            width={360}
+            height={360}
+            className="cursor-pointer"
+            key={i}/>
+            ))}
+        </div>
       </main>
     </div>
   );
