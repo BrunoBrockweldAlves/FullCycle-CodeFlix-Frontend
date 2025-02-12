@@ -4,8 +4,7 @@ import { PlayIcon } from "@heroicons/react/24/solid";
 
 export function Banner () {
   return (
-    <div>
-
+    <div className="mb-10">
     <div className="flex flex-col space-y-2 py-16 md:space-y-4 lg:h-[65vh] lg:justify-end lg:pb-12">
     <div className="absolute left-0 top-0 -z-10 h-[95vh] w-screen">
       <Image
