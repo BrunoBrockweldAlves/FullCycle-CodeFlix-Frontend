@@ -10,8 +10,8 @@ export default function LoginForm() {
     };
 
     return (
-        <AuthForm formType={'login'} onSubmit={function (e: React.FormEvent<HTMLFormElement>): void {
-            handleSubmit
-          } } />
+            <AuthForm formType={'register'} onSubmit={function (e: React.FormEvent<HTMLFormElement>): void {
+                handleSubmit
+            } } />
     );
 }
