@@ -12,7 +12,7 @@ export const InputField: React.FC<InputFieldProps> = ({
 }) => {
     return (
         <div className='mt-8 flex flex-col space-y-4'>
-            <label htmlFor='email' className='text-sm font-semibold text-gray-500'>
+            <label htmlFor={id} className='text-sm font-semibold text-gray-500'>
                 {label}
             </label>
             <input
