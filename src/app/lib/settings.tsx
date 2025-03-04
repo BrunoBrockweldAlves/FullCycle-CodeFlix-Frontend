@@ -9,11 +9,7 @@ export const getAppSettings = ():Promise<{theme: string, language: string}> => {
     )});
 }
 
-export const getUserInfo = ():Promise<{
-    name: string,
-    mail: string,
-    age: number,
-}> => {
+export const getUserInfo = ():Promise<User> => {
     return new  Promise((resolve) => {
         setTimeout(() => {
             resolve({
@@ -23,4 +19,19 @@ export const getUserInfo = ():Promise<{
             })
         }, 2000
     )});
+}
+
+export interface User{
+    name: string,
+    id: string,
+    username: string,
+    mail: string,
+    age: number,
+    website:string
+}
+
+export async function getUserById(id:string): Promise<User> {
+    const response  = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
+    const user = await response.json();
+    return user;
 }
