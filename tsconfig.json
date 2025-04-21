@@ -24,6 +24,6 @@
       "@hooks/*": ["src/app/hooks/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/types/Movie.js"],
   "exclude": ["node_modules"]
 }
