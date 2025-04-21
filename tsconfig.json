@@ -24,6 +24,6 @@
       "@hooks/*": ["src/app/hooks/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/types/Movie.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/types/Movie.js", "jest.config.js"],
   "exclude": ["node_modules"]
 }
